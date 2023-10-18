@@ -6,7 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { PdfModule } from './pdf/pdf.module';
 import { ConfigModule } from '@nestjs/config';
 import 'dotenv/config';
-
+console.log(process.env);
 @Module({
   imports: [
     PetsModule,
