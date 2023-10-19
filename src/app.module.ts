@@ -6,7 +6,11 @@ import { AuthModule } from './auth/auth.module';
 import { PdfModule } from './pdf/pdf.module';
 import { ConfigModule } from '@nestjs/config';
 import 'dotenv/config';
-console.log(process.env);
+console.log(process.env.DATABASE_TYPE);
+console.log(process.env.DATABASE_PORT);
+console.log(process.env.DATABASE_HOST);
+console.log(process.env.DATABASE_USERNAME);
+
 @Module({
   imports: [
     PetsModule,
