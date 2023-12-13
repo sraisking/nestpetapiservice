@@ -1,9 +1,9 @@
 function generateHeader(doc) {
   console.log(__dirname);
 
-  const imagePath = `${__dirname}/ycf.png`;
+  // const imagePath = `${__dirname}/ycf.png`;
   doc
-    .image(imagePath, 50, 45, { width: 50 })
+    // .image(imagePath, 50, 45, { width: 50 })
     .fillColor('#444444')
     .fontSize(20)
     .text("Yasmin's care Foundation.", 110, 57)
