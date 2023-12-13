@@ -47,10 +47,9 @@ function generateCustomerInformation(doc, invoice) {
     .text(`Invoice Number: ${invoice.id}`, 50, 200)
     .text(`Invoice Date: ${new Date()}`, 50, 215)
     .text(`Balance Due: ${amount}`, 50, 130)
-
-    .text(invoice.name, 300, 200)
-    .text(invoice.contact, 300, 215)
-    .text(invoice.status, 300, 130)
+    .text(`Client Name: ${invoice.name}`, 50, 200)
+    .text(`Contact: ${invoice.contact}`, 50, 215)
+    .text(`Pet status: ${invoice.status}`, 50, 130)
     .moveDown();
 }
 export { generateHeader, generateCustomerInformation, generateInvoiceTable };
