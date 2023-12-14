@@ -40,7 +40,14 @@ export class PetsService {
       status,
       dateOfAdmission,
       dateOfDischarge,
+      deworming,
+      spotOnStatus,
+      vaccination,
+      lastVaccinationDate,
+      lastSpotOnDate,
+      lastDewormingDate,
       items,
+      medicalHistory
     } = addPetDto;
     console.log(this.petRepository);
     const addPet = this.petRepository.create({
@@ -50,14 +57,21 @@ export class PetsService {
       status,
       dateOfAdmission,
       dateOfDischarge,
+      deworming,
+      spotOnStatus,
+      vaccination,
+      lastVaccinationDate,
+      lastSpotOnDate,
+      lastDewormingDate,
       items,
+      medicalHistory
     });
     await this.petRepository.save(addPet);
     return addPet;
   }
   async getPetById(id: string): Promise<PetEntity> {
     console.log("Inside getpetsbyId");
-    
+
     const found = await this.petRepository.findOne({ where: { id: id } });
     if (found) return found;
     else {

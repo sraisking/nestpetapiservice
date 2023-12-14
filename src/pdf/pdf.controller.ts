@@ -31,7 +31,7 @@ export class PdfController {
   async generatePdf(@Param('id') id: string, @Res() response: Response) {
     const petDetails = await this.petService.getPetById(id);
     console.log(petDetails);
-    const content = 'Hello NestJS PDF Generation!';
+    const content = 'Please provide a feedback for Trust Animals in Google!';
     try {
       const pdfBuffer = await this.pdfService.generatePdf(content,petDetails);
 
